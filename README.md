@@ -54,3 +54,12 @@ Sentinel is not just another chat application; it's a comprehensive safety platf
 ![alt text](images/business.png)
 
 As a Software as a Service (SaaS) solution, Sentinel offers a subscription-based model targeting Big Tech Companies with already existing large platforms, enabling them to enhance the safety and security of their platforms. By investing in Sentinel, these companies demonstrate their commitment to providing a safer online environment for their users, while parents gain peace of mind knowing that their children are better protected from harmful content.
+
+- Big Tech Companies: Companies that implement
+communication channels, eg: instagram, Discord
+
+- Developers: People implementing the service into their
+application.
+
+- Parents & Children: parents allowing their kids access
+to these channels and children utilizing them
