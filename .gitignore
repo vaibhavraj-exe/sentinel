@@ -10,3 +10,9 @@ test
 *.mp4
 *.pdf
 *.env
+
+##ml
+
+ml/dataset/
+ml/models/
+ml/outputs
