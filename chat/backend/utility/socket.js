@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 import cors from "cors";
 
 const app = express();
-app.use(express.static("D:\\Sentinel\\chat\\backend\\uploads"));
+app.use(express.static("C:\\Storage\\Coding Stuff\\HACKATHON\\MOZOHACK 5.0\\sentinel\\chat\\backend\\uploads"));
 
 app.use(
   cors({

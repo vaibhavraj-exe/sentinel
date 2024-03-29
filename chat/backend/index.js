@@ -6,6 +6,7 @@ import bodyParser from "body-parser";
 import authRouter from "./routes/auth.routes.js";
 import messageRouter from "./routes/messsage.routes.js";
 import userRouter from "./routes/user.routes.js";
+import violationRouter from "./routes/violation.router.js";
 import conversationRouter from "./routes/conversation.router.js";
 import { connectToDatabase } from "./utility/dbConnection.js";
 import { app, server } from "./utility/socket.js";
@@ -26,6 +27,7 @@ app.use("/api/auth/", authRouter);
 app.use("/api/message/", messageRouter);
 app.use("/api/users/", userRouter);
 app.use("/api/conversation/", conversationRouter);
+app.use("/api/violations/", violationRouter);
 
 // Start Backend Server
 server.listen(port, () => {

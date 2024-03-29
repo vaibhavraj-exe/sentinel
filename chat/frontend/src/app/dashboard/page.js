@@ -87,8 +87,8 @@ const Dashboard = () => {
   }, [userAuthenticated]);
 
   return (
-    <div className="flex justify-center items-center h-screen overflow-hidden">
-      <div className="card card-side max-w-7xl mx-auto w-full bg-base-300 shadow-xl p-4 h-4/5">
+    <div className="flex justify-center items-center h-screen overflow-hidden bg-[#202020]">
+      <div className="card card-side max-w-full mx-auto w-full shadow-xl p-4 h-full rounded-l-md bg-[#2c2c2c] ml-16">
         <ChatSearchBox />
         <ChatBox />
       </div>

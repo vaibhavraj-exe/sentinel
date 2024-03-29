@@ -2,6 +2,7 @@ import multer from "multer";
 import express from "express";
 import newMessageController from "../controllers/newMessage.controller.js";
 import getMessageController from "../controllers/getMessage.controller.js";
+import callController from "../controllers/call.controller.js";
 import verifyAuth from "../middlewares/auth.middleware.js";
 
 const storage = multer.diskStorage({
@@ -24,5 +25,6 @@ messageRouter.post(
   newMessageController
 );
 messageRouter.get("/:recieverID", verifyAuth, getMessageController);
+messageRouter.post("/call", verifyAuth, callController);
 
 export default messageRouter;

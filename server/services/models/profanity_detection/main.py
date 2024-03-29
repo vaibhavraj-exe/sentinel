@@ -2,6 +2,8 @@ import re
 import pika
 import json
 
+from words import check_blacklisted_words
+
 RABBITMQ_HOST = "localhost"
 RABBITMQ_EXCHANGE = "message_exchange"
 RESULTS_QUEUE = "results_queue"
@@ -56,9 +58,17 @@ def main():
         text = message["text"]
         print("text", text)
 
-        sentiment = contains_profanity(text)
-        sentiment = sentiment.get("sentiment", [])
-        print("sentiment", sentiment)
+        profane_words = check_blacklisted_words(text)
+        print("profane_words", profane_words)
+
+        if profane_words["harmful"]:
+            sentiment = ["profanity"]
+
+        
+        if not profane_words["harmful"]:
+            sentiment = contains_profanity(text)
+            sentiment = sentiment.get("sentiment", [])
+            print("sentiment", sentiment)
 
         print("Publishing results to RabbitMQ...")
         channel.basic_publish(

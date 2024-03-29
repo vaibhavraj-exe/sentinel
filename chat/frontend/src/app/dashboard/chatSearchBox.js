@@ -66,7 +66,7 @@ const ChatSearchBox = () => {
 
   return (
     <div
-      className="border-r-2 border-base-100 pr-4"
+      className="border-r-2 border-[#202020] pr-4"
       onClick={handleTextErrorState}
     >
       <div className="flex flex-col h-full justify-between">
@@ -79,7 +79,8 @@ const ChatSearchBox = () => {
                 </span>
               )}
             </div>
-            <label className="input input-bordered flex items-center gap-2">
+            <label className="input input-bordered flex items-center gap-2 border-b-2 border-[#3d3d3d] join-item bg-[#3d3d3d]"
+            style={{ outline: "none" }}>
               <input
                 type="text"
                 className="grow"
@@ -97,12 +98,12 @@ const ChatSearchBox = () => {
               </svg>
             </label>
           </label>
-          <div className="flex flex-col mt-4 shadow-xl rounded-md cursor-pointer overflow-hidden overflow-y-scroll no-scrollbar">
-            <div className="flex flex-col bg-gray-200 shadow-xl rounded-md cursor-pointer dark:bg-gray-800">
+          <div className="flex flex-col mt-4 rounded-md cursor-pointer overflow-hidden overflow-y-scroll no-scrollbar">
+            <div className="flex flex-col bg-gray-200 rounded-md cursor-pointer dark:bg-gray-800">
               {searchedUsers.map((item, index) => {
                 return (
                   <div
-                    className="flex items-center p-2 h-12 text-black hover:bg-gray-800"
+                    className="flex items-center p-2 h-12 bg-[#f5f5f58a] rounded-lg"
                     key={index}
                     onClick={() => handleSearchedUserClick(item)}
                   >
@@ -116,7 +117,7 @@ const ChatSearchBox = () => {
                         />
                       </div>
                     </div>
-                    <div className="ml-3"> {item.name}</div>
+                    <div className="ml-3 text-black"> {item.name}</div>
                   </div>
                 );
               })}
@@ -126,10 +127,10 @@ const ChatSearchBox = () => {
                 <div
                   className={`${
                     onGoingUserChat && onGoingUserChat?._id === item?._id
-                      ? "bg-blue-800"
-                      : "bg-base-100"
+                      ? "bg-[#454545] hover:bg-[#515151]"
+                      : "bg-[#2c2c2c] hover:bg-[#383838]"
                   }
-                        flex justify-between items-center p-2 pl-3 h-14 mt-1 rounded-md bg-base-100 hover:glass`}
+                        flex justify-between items-center p-2 pl-3 h-14 mt-1 rounded-md bg-base-100 hover:glass text-slate-50`}
                   key={index}
                   onClick={() => dispatch(setNewChat(item))}
                 >

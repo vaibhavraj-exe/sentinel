@@ -91,7 +91,7 @@ const ChatBox = () => {
     <div className="px-4 no-scrollbar w-full">
       {onGoingUserChat ? (
         <div className="flex flex-col h-full">
-          <div className="my-3 overflow-y-scroll chat-window">
+          <div className="my-3 px-32 overflow-y-scroll chat-window">
             {onGoingUserChat?.credits <= 0.5 && <ScammerWarning />}
             {chats.length ? (
               isLoading ? (
@@ -120,12 +120,14 @@ const ChatBox = () => {
                                 .fromNow()}
                             </time>
                           </div>
-                          <div className="chat-bubble">{item.messageText}</div>
+                          <div className="chat-bubble bg-[#353535] ">
+                            {item.messageText}
+                          </div>
                         </div>
                       ) : (
                         <div className="chat chat-end">
                           <div className="chat-image avatar">
-                            <div className="w-10 rounded-full">
+                            <div className="w-10 rounded-full invisible">
                               <Image
                                 src={userInfo.profilepic}
                                 alt="profile pic"
@@ -141,7 +143,7 @@ const ChatBox = () => {
                                 .fromNow()}
                             </time>
                           </div>
-                          <div className="chat-bubble">
+                          <div className="chat-bubble bg-[#005c4b] text-slate-50">
                             {item.fileUrl && (
                               <>
                                 {item.fileUrl.includes(".mp4") ? (
@@ -256,8 +258,71 @@ const ChatBox = () => {
                 )}
               </div>
             )}
-            <div className="flex items-center gap-2 w-full join-item">
-              <label className="input flex items-center gap-2 w-full join-item">
+            <div className="flex items-center gap-2 w-full join-item border-t-2 border-[#202020] py-2">
+              <div className="dropdown dropdown-top join-item">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="join-item pl-4 bg-[#2c2c2c]"
+                >
+                  <Image
+                    src={"./attachment.svg"}
+                    width={20}
+                    height={20}
+                    alt="attachment"
+                  />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu p-2 shadow bg-base-100 mb-2 rounded-md w-40"
+                >
+                  <div className="flex justify-center items-center gap-3">
+                    {/* <li className="w-fu">
+                      <input
+                        type="file"
+                        id="vid"
+                        className="hidden"
+                        name="vid"
+                        accept=".mp4,video/*"
+                        onChange={handleFileSelect}
+                      />
+                      <label htmlFor="vid">
+                        <Image src={"/vid.png"} width={30} height={30} />
+                      </label>
+                    </li> */}
+                    <li className="">
+                      <input
+                        type="file"
+                        id="pdf"
+                        className="hidden"
+                        name="pdf"
+                        accept=".pdf"
+                        onChange={handleFileSelect}
+                      />
+                      <label htmlFor="pdf">
+                        <Image src={"/pdf.png"} width={30} height={30} />
+                      </label>
+                    </li>
+                    <li className="">
+                      <input
+                        type="file"
+                        id="img"
+                        className="hidden"
+                        name="img"
+                        accept="image/*"
+                        onChange={handleFileSelect}
+                      />
+                      <label htmlFor="img">
+                        <Image src={"/img.png"} width={30} height={30} />
+                      </label>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+              <label
+                className="input border-none flex items-center gap-2 w-full join-item bg-[#2c2c2c]"
+                style={{ outline: "none" }}
+              >
                 <input
                   type="text"
                   className="grow"
@@ -275,10 +340,19 @@ const ChatBox = () => {
                     viewBox="0 0 512 512"
                     onClick={handleSendMessge}
                   >
-                    <path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z" />
+                    <path
+                      d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"
+                      fill="#ffffff"
+                    />
                   </svg>
                 )}
               </label>
+            <button
+                className="btn btn-success join-item"
+                onClick={() => dispatch(videoCall())}
+              >
+                <Image src={'./video.svg'} height={30} width={30} alt="Video Call"/>
+              </button>
             </div>
           </div>
         </div>
