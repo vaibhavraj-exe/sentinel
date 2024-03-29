@@ -48,5 +48,7 @@ Sentinel is not just another chat application; it's a comprehensive safety platf
 ### Future Prospects
 - **MultiLingual Support**
 - **Speech Processing**
-- 
+- **Federated Learning**
+
 ### Business model
+- 
