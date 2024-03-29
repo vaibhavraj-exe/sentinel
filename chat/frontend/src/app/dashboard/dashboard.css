@@ -1,0 +1,35 @@
+.search-box {
+  top: 5%;
+  left: 44%;
+  width: 250px;
+}
+
+.chat-box-wrapper {
+  width: 350px;
+}
+
+.chat-window {
+  height: 87%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
