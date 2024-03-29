@@ -64,5 +64,37 @@ communication channels, eg: instagram, Discord
 - Developers: People implementing the service into their
 application.
 
-- Parents & Children: parents allowing their kids access
-to these channels and children utilizing them
+- Parents & Children: parents allowing their kids access to these channels and children utilizing them
+
+### Demo Videos
+- A chat app from future
+
+https://github.com/vaibhavraj-exe/sentinel/assets/85381117/bf27f1f9-90ac-48a7-82b2-603c951906b0
+
+- Keeps children safe with AI based text filter
+
+https://github.com/vaibhavraj-exe/sentinel/assets/85381117/c2b7e33d-573f-40ed-8514-8d05c181252c
+
+- Blocked keywords provide extra layer of security
+
+https://github.com/vaibhavraj-exe/sentinel/assets/85381117/f0e90b4c-36e5-4006-b2ad-7da028b18892
+
+- Image and document profanity detection for safe media sharing
+
+https://github.com/vaibhavraj-exe/sentinel/assets/85381117/b94ea8a1-f171-4b88-8ecb-c18a9d78e7e6
+
+https://github.com/vaibhavraj-exe/sentinel/assets/85381117/20805668-5a30-4364-9439-835ee662eb2a
+
+- Safe live video calling
+
+https://github.com/vaibhavraj-exe/sentinel/assets/85381117/35fd8a28-6140-453c-8303-f200879e60ed
+
+- Score based system, accounts with score lower than thresold get flagged
+
+<img width="1280" alt="beware" src="https://github.com/vaibhavraj-exe/sentinel/assets/85381117/c0548bec-042c-4349-b7e5-b122abcd8a14">
+
+- AI based appeal system
+
+https://github.com/vaibhavraj-exe/sentinel/assets/85381117/96c4df18-2973-4733-a9cf-9c41142d5f98
+
+
