@@ -45,6 +45,8 @@ Sentinel is not just another chat application; it's a comprehensive safety platf
 
 - **Document Analysis:** Phrases Documents to detect profanity and explicit content.
 
+![alt text](images/business.png)
+
 ### Future Prospects
 - **MultiLingual Support**
 - **Speech Processing**
