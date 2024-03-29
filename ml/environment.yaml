@@ -1,0 +1,13 @@
+name: sentinel_ml
+channels:
+  - defaults
+dependencies:
+  - python=3.12.2
+  - pip:
+      - torch
+      - fastapi
+      - pandas
+      - 'transformers[torch]'
+      - torchinfo
+      - torchmetrics
+      - matplotlib
