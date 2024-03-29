@@ -3,14 +3,6 @@
 Sentinel is an advanced safety platform designed to protect children in online communication environments. This repository hosts the source code and documentation for our comprehensive safety solution.
 Features
 
-- Real-time Chat Monitoring: Monitors chat conversations in real-time for inappropriate content.
-- Profanity Detection: Utilizes Named Entity Recognition for identifying personal information and flagging instances of profanity.
-- Speech to Text: Converts audio messages into text for analysis and monitoring.
-- Link Analysis: Scans URLs within chat messages for signs of suspicious or malicious content.
-- Explicit Image Detection: Filters images containing nudity, violence, or graphic imagery.
-- Spam/Fraud Account Detection: Identifies and mitigates deceptive practices such as spamming and fraudulent account creation.
-- Document Analysis: Phrases Documents to detect profanity and explicit content.
-
 
 ## Problem Statement
 
@@ -33,3 +25,28 @@ their emotional and psychological development.
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="images/plot1.png">|  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="images/plot2.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="images/plot3.png">|
+
+## Solution 
+Sentinel is not just another chat application; it's a comprehensive safety platform meticulously designed to enhance the security of children in online communication environments. It's important to note that Sentinel is not meant to replace or compete with existing chat or social media platforms. Instead, it serves as a vital addition to these spaces, providing an extra layer of protection and safety measures. By seamlessly integrating into various chat and social media rooms, Sentinel aims to augment the safety standards of these platforms, ensuring that children can interact online with reduced exposure to inappropriate content and potential risks
+
+### Features implemented
+
+- **Real-time Chat Monitoring:** Monitors chat conversations in real-time for inappropriate content, via parallel computing for reduced inference times.
+
+- **Multiplatform Integration:** Seamless integration with chat platforms used by children, effective in various digital environments.
+
+- **Profanity Detection:** Utilizes Named Entity Recognition for identifying personal information and flagging instances of profanity.
+
+- **Link Analysis:** Scans URLs within chat messages for signs of suspicious or malicious content.
+
+- **Explicit Image Detection:** Filters images containing nudity, violence, or graphic imagery.
+
+- **Spam/Fraud Account Detection:** Identifies and mitigates deceptive practices such as spamming and fraudulent account creation.
+
+- **Document Analysis:** Phrases Documents to detect profanity and explicit content.
+
+### Future Prospects
+- **MultiLingual Support**
+- **Speech Processing**
+- 
+### Business model
