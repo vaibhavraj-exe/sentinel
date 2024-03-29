@@ -31,7 +31,7 @@ Sentinel is not just another chat application; it's a comprehensive safety platf
 
 ### Features implemented
 
-- **Real-time Chat Monitoring:** Monitors chat conversations in real-time for inappropriate content, via parallel computing for reduced inference times.
+- **Real-time Chat Monitoring:** Monitors chat conversations in real-time for inappropriate content, uses queues to parallely compute input, reducing inference time tremendously.
 
 - **Multiplatform Integration:** Seamless integration with chat platforms used by children, effective in various digital environments.
 
@@ -45,7 +45,7 @@ Sentinel is not just another chat application; it's a comprehensive safety platf
 
 - **Document Analysis:** Phrases Documents to detect profanity and explicit content.
 
-![alt text](images/business.png)
+![alt text](images/arch.jpeg)
 
 ### Future Prospects
 - **MultiLingual Support**
