@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Alert from "../components/alertToast";
-import ThemeProvider from "../components/themeSelector";
+
 import {
   loginUser,
   resetErrorState,
