@@ -52,6 +52,57 @@ Sentinel is not just another chat application; it's a comprehensive safety platf
 - **Speech Processing**
 - **Federated Learning**
 
+### Running Locally
+
+- This repo is split into 3 parts - the chat frontend, the chat backend and the python server
+
+```bash
+git clone https://github.com/vaibhavraj-exe/sentinel
+cd sentinel
+```
+
+#### Running the python server
+- Install [Erlang](https://www.erlang.org/)
+- Install [RabbitMQ](https://www.rabbitmq.com/docs/install-windows)
+- - Run RabbitMQ after it gets installed
+```bash
+cd server/services
+pip install -r requirements.txt
+
+uvicorn server:app --host=0.0.0.0 --port=8000
+
+# create another terminal
+cd models/link_detection
+python main.py
+
+# create another terminal
+cd models/video_detection
+python main.py
+
+# create another terminal
+cd models/profanity_detection
+python main.py
+```
+
+```bash
+# Install nodejs beforehand
+```
+
+#### Running the chat-app frontend
+```bash
+cd chat/frontend
+npm i
+npm run build
+npm start
+```
+
+#### Running the chat-app backend
+```bash
+cd chat/backend
+npm i
+node .
+```
+
 ### Business model
 
 ![alt text](images/business.png)
